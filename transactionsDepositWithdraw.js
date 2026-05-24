@@ -7,6 +7,8 @@ const transactions = [
     {type: "withdraw", amount: 2000}]
     
 var totalamount = 0
+var totaldeposit = 0
+var totalwithdraw = 0
 
 transactions.map((item,index) => { 
     if (item.type == "deposit") {
@@ -15,5 +17,21 @@ transactions.map((item,index) => {
         totalamount -= item.amount
     }
 })
+transactions.map((item,index) => { 
+    if (item.type == "deposit") {
+        totaldeposit += item.amount
+    } else if (item.type == "withdraw") {
+        totaldeposit + 0
+    }
+})
+transactions.map((item,index) => { 
+    if (item.type == "withdraw") {
+        totalwithdraw += item.amount
+    } else if (item.type == "deposit") {
+        totalwithdraw + 0
+    }
+})
 
-console.log(totalamount)
+console.log("Total Amount = " + totalamount)
+console.log("Total Deposited = " + totaldeposit)
+console.log("Total Withdrawed = " + totalwithdraw)
