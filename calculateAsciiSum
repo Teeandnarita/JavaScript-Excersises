@@ -1,0 +1,15 @@
+function calculateAsciiSum(str) {
+    const cut = str.split("")
+    const numbers = []
+
+     for (let i = 0; i < cut.length; i++) {
+        numbers.push(cut[i].charCodeAt(0))
+    }
+
+    let sum = 0
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i]
+    }
+
+    return sum;
+}
